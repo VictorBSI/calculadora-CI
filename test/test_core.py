@@ -35,6 +35,10 @@ class TestMethods(unittest.TestCase):
     def test_avg(self):
         operation = Operations([1,2,3,4], False)
         self.assertAlmostEqual(operation.avg(), 2.5, msg='Incorrect result')
+    
+    def test_division_remainder(self):
+        operation = Operations(4, 2)
+        self.assertEqual(operation.division_remainder(), 0, 'Incorrect result')
 
 if __name__ == '__main__':
     unittest.main()
